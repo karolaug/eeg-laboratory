@@ -29,6 +29,7 @@ import numpy as np
 ile = int(sys.argv[1])
 sys.stdout.write("\n\n\n\n")
 sys.stdout.write(" ")
+time.sleep(15)
 for i in range(ile):
     time.sleep(13+np.random.random(1)*2)
     sys.stdout.write("\rX")
