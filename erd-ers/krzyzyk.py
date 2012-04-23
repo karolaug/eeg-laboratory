@@ -26,15 +26,16 @@ import time
 import sys
 import numpy as np
 
-ile = int(sys.argv[1])
+#ile = int(sys.argv[1])
+ile = 60
 sys.stdout.write("\n\n\n\n")
-sys.stdout.write(" ")
+sys.stdout.write("           ")
 time.sleep(15)
 for i in range(ile):
     time.sleep(13+np.random.random(1)*2)
-    sys.stdout.write("\rX")
+    sys.stdout.write("\rXXXXXXXXXXX")
     time.sleep(2)
-    sys.stdout.write("\r ")
+    sys.stdout.write("\r           ")
 
 time.sleep(5)
 sys.stdout.write("\n")
