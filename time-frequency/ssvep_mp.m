@@ -5,7 +5,7 @@ addpath('/home/karolaug/Work/MP/');
 addpath('/home/karolaug/Work/MP/viewData/');
 % only once
 
-freq = sv_loadfreq('jaroslaw-rybusinski-ssvep-1');
+freq = importdata('jaroslaw-rybusinski-ssvep-1.txt');
 unique(freq)
 freq_from = 15;
 freq_to = 40;
