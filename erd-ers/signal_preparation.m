@@ -8,6 +8,8 @@ q = find(data(22,:) == 1);
 data = detrend(data);
 t = linspace(1,256, 513);
 
+data = bsxfun(@minus,data,(data(20,:)+data(21,:)/2));
+
 for i=1:length(q),
     data_ref(i,:,:) = data(1:21,q(i)-4*info.fs:q(i)-2*info.fs);
     data_exp(i,:,:) = data(1:21,q(i)+0.5*info.fs:q(i)+2.5*info.fs);
