@@ -1,6 +1,6 @@
 clear all
 h = '/home/karolaug/Work/';
-load([h 'eeg-laboratory/erd-ers/data_non_filter.mat']);
+load([h 'eeg-laboratory/erd-ers/data_epochs_non_filter.mat']);
 load([h 'eeg-laboratory/erd-ers/others.mat']);
 
 data_exp_fft = fft(data_exp,[],3);
