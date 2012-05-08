@@ -1,11 +1,9 @@
-function [data_ref, data_exp] = prepare_data(data, q, fs)
+function [data_] = prepare_data(data, q, time, fs)
     for i=1:length(q),
-    data_ref(i,:,:) = data(1:21,q(i)-4*fs:q(i)-2*fs);
-    data_exp(i,:,:) = data(1:21,q(i)+0.5*fs:q(i)+2.5*fs);
+    data_(i,:,:) = data(1:21,q(i)+time(1)*fs:q(i)+time(2)*fs);
     end
-for i=1:60,
+for i=1:length(q),
     for j=1:21,
-        data_exp(i,j,:) = detrend(data_exp(i,j,:));
-        data_ref(i,j,:) = detrend(data_ref(i,j,:));
+        data_(i,j,:) = detrend(data_(i,j,:));
     end
 end
