@@ -1,4 +1,4 @@
-function [data_] = prepare_data(data, q, time, fs)
+function [data_] = extract_epochs(data, q, time, fs)
     for i=1:length(q),
     data_(i,:,:) = data(1:21,q(i)+time(1)*fs:q(i)+time(2)*fs);
     end
