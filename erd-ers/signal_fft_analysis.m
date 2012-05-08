@@ -13,11 +13,11 @@ t = t_conv;
 %size(t_conv)
 %size(conv(fft_ref(11,:),ones(10,1)))
 
-c1_exp = conv(fft_exp(9,:),ones(10,1))
-c2_exp = conv(fft_exp(11,:),ones(10,1))
+c1_exp = conv(fft_exp(9,:),ones(10,1));
+c2_exp = conv(fft_exp(11,:),ones(10,1));
 
-c1_ref = conv(fft_ref(9,:),ones(10,1))
-c2_ref = conv(fft_ref(11,:),ones(10,1))
+c1_ref = conv(fft_ref(9,:),ones(10,1));
+c2_ref = conv(fft_ref(11,:),ones(10,1));
 
 subplot(2,2,1)
 plot(t, c1_exp, 'r', t, c1_ref, 'b')
