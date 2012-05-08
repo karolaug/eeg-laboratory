@@ -13,9 +13,7 @@ save([h 'eeg-laboratory/erd-ers/data_non_filter.mat'],'data_ref', 'data_exp');
 save([h,'eeg-laboratory/erd-ers/others.mat'], 'info', 't');
 
 
-clear data;
-clear i;
-clear q;
+clear all
 %info.numchans = 21;
 %info.channames(22:end) = [];
 %info.gain(22:end) = [];
