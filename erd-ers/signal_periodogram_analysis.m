@@ -1,6 +1,7 @@
 clear all
 h = '/home/karolaug/Work/';
-load([h 'eeg-laboratory/erd-ers/data.mat']);
+load([h 'eeg-laboratory/erd-ers/data_non_filter.mat']);
+load([h 'eeg-laboratory/erd-ers/others.mat']);
 
 for i=1:60,
     for j=1:21,
@@ -24,9 +25,9 @@ title('elektroda C4');
 
 subplot(2,2,3)
 plot(t,per_exp(9,:) - per_ref(9,:),'b')
-axis([5,15,0,150])
+axis([5,15,0,250])
 title('roznica C3');
 subplot(2,2,4)
 plot(t,per_exp(11,:) - per_ref(11,:),'b')
-axis([5,15,0,150])
+axis([5,15,0,250])
 title('roznica C4');
