@@ -2,11 +2,11 @@ clear all
 h = '/home/karolaug/Work/';
 hjorth = 0;
 if hjorth == 0,
-    load([h 'eeg-laboratory/erd-ers/data_epochs_mu_and_beta.mat']);
+    load([h 'eeg-laboratory/erd-ers/movement/data_epochs_mu_and_beta.mat']);
 else
-    load([h 'eeg-laboratory/erd-ers/data_epochs_mu_and_beta_hjorth.mat']);
+    load([h 'eeg-laboratory/erd-ers/movement/data_epochs_mu_and_beta_hjorth.mat']);
 end
-load([h 'eeg-laboratory/erd-ers/others.mat']);
+load([h 'eeg-laboratory/erd-ers//movement/others.mat']);
 
 data_beta = data_beta.^2;
 data_mu = data_mu.^2;

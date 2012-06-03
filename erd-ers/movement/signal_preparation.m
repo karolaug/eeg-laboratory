@@ -10,8 +10,8 @@ t = linspace(0,256, 513);
 data = bsxfun(@minus,data,(data(20,:)+data(21,:)/2));
 data_ref = extract_epochs(data, q, [-4,-2], info.fs);
 data_exp = extract_epochs(data, q, [0.5, 2.5], info.fs);
-save([h 'eeg-laboratory/erd-ers/data_epochs_non_filter.mat'],'data_ref', 'data_exp');
-save([h,'eeg-laboratory/erd-ers/others.mat'], 'info', 't');
+save([h 'eeg-laboratory/erd-ers/movement/data_epochs_non_filter.mat'],'data_ref', 'data_exp');
+save([h,'eeg-laboratory/erd-ers/movement/others.mat'], 'info', 't');
 
 data_mu = filter_data(data, info.fs, 2, [8, 15]);
 data_beta = filter_data(data, info.fs, 2, [18, 25]);
@@ -19,7 +19,7 @@ data_beta = filter_data(data, info.fs, 2, [18, 25]);
 data_mu = extract_epochs(data_mu, q, [-5, 5], info.fs);
 data_beta = extract_epochs(data_beta, q, [-5, 5], info.fs);
 
-save([h 'eeg-laboratory/erd-ers/data_epochs_mu_and_beta.mat'], 'data_mu', 'data_beta');
+save([h 'eeg-laboratory/erd-ers/movement/data_epochs_mu_and_beta.mat'], 'data_mu', 'data_beta');
 
 clear all
 %info.numchans = 21;
