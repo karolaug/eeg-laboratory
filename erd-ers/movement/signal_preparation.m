@@ -6,7 +6,7 @@ data = sv_sig2trigg_bool(data, 22);
 %plot(data(22,:));
 q = find(data(22,:) == 1);
 data = detrend(data);
-t = linspace(0,256, 513);
+t = linspace(0,info.fs, 513);
 data = bsxfun(@minus,data,(data(20,:)+data(21,:)/2));
 data_ref = extract_epochs(data, q, [-4,-2], info.fs);
 data_exp = extract_epochs(data, q, [0.5, 2.5], info.fs);

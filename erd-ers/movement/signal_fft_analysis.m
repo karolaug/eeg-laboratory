@@ -8,7 +8,7 @@ data_ref_fft = fft(data_ref,[],3);
 
 fft_exp = abs(squeeze(mean(data_exp_fft,1)));
 fft_ref = abs(squeeze(mean(data_ref_fft,1)));
-t_conv = linspace(0, 256, 522);
+t_conv = linspace(0, info.fs, 522);
 t = t_conv;
 %size(t_conv)
 %size(conv(fft_ref(11,:),ones(10,1)))
@@ -21,18 +21,18 @@ c2_ref = conv(fft_ref(11,:),ones(10,1));
 
 subplot(2,2,1)
 plot(t, c1_exp, 'r', t, c1_ref, 'b')
-axis([0,40,0,4000])
+axis([0,35,0,4000])
 title('elektroda C3');
 subplot(2,2,2)
 plot(t, c2_exp, 'r', t, c2_ref, 'b')
-axis([0,40,0,4000])
+axis([0,35,0,4000])
 title('elektroda C4');
 
 subplot(2,2,3)
 plot(t, c1_exp - c1_ref, 'b')
-axis([0,40,-500,500])
+axis([0,35,-500,500])
 title('roznica C3');
 subplot(2,2,4)
 plot(t, c2_exp - c2_ref, 'b')
-axis([0,40,-500,500])
+axis([0,35,-500,500])
 title('roznica C4');

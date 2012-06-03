@@ -1,6 +1,6 @@
 clear all
 h = '/home/karolaug/Work/';
-hjorth = 0;
+hjorth = 1;
 if hjorth == 0,
     load([h 'eeg-laboratory/erd-ers/movement/data_epochs_mu_and_beta.mat']);
 else
