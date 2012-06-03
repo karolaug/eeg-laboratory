@@ -2,7 +2,7 @@ addpath('/home/karolaug/Work/svarog2matlab/');
 addpath('/home/karolaug/Work/eeg-laboratory/erd-ers/movement/');
 clear all
 h = '/home/karolaug/Work/';
-[info, data] = sv_loaddata([h 'eeg-signals/assr/karol-siek-assr-2']);
+[info, data] = sv_loaddata([h 'eeg-signals/assr/karol-siek-assr-1']);
 %plot(data(25,:))
 data(25,:) = data(25,:).^2;
 data = sv_sig2trigg_kus(info,data,25,1);
